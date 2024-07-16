@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration:none ;
+}
+
+body{
+    background-color: #030303;
+    color: white;
+    font-family: "Bebas Neue", cursive;
+}
+
+.header{
+    min-height: 100vh;
+    background-image: url("img/bg2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    border: 5px solid black;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items:first baseline;
+    
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo
+{
+    font-weight: bold;
+    font-size: 50px;
+    color:white;
+    animation-duration: 4s;
+    animation-name: slidein;
+}
+
+#menu{
+    display: none;
+}
+
+.menu label
+{
+    cursor:pointer;
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.navbar ul
+{
+    position: relative;
+    display: flex;
+}   
+
+.navbar ul li a
+{
+    font-size: 30px;
+    font-weight: bold; 
+    color: white;
+    padding: 20px;
+}
+
+.navbar ul li a:hover
+{
+    color: #FF2F27;
+}
+
+.btn-1
+{
+    display: inline-block;
+    color: white;
+    padding: 7px 20px;
+    background-color: #FF2F27;
+    font-size: 20px;
+    align-content: center;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+
+.header-content{
+    display: flex;
+    width: 100%;
+}
+
+.header-1
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: flex-end;
+}
+
+.header1 img
+{
+    width: 280px;
+
+}
+
+.btn-2{
+    display: inline-block;
+    width: 110px;
+    color: white;
+    padding: 7px 20px;
+    font-size: 20px;
+    background-color: #FF2F27;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.header-2
+{
+    width: 50%;
+    margin-top: 70px;
+    text-align: end;
+}
+
+.header-2 h1
+{
+    color:#FFFFFF73;
+    font-size: 6em;
+    line-height: 1.2em;
+}
+
+.header-2 img{
+    width: 70px;
+}
+
+.movies{
+    padding: 50px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.movies h2
+{
+    font-size: 30px;
+    margin-bottom: 20px; ;
+}
+
+hr{
+    border: solid 2px red;
+    margin-bottom: 40px;
+}
+
+.box-container-1,
+.box-container-2,
+.box-container-3
+{
+    
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap: 40px;
+}
+
+.box1,
+.box2,
+.box3{
+    border-radius: 5px;
+    z-index: 1000;
+    display:none;
+} 
+
+.box1:nth-child(1),
+.box1:nth-child(2),
+.box1:nth-child(3),
+.box1:nth-child(4){
+    display:inline-block;
+}
+
+.box2:nth-child(1),
+.box2:nth-child(2),
+.box2:nth-child(3),
+.box2:nth-child(4){
+    display:inline-block;
+}
+
+.box3:nth-child(1),
+.box3:nth-child(2),
+.box3:nth-child(3),
+.box3:nth-child(4){
+    display:inline-block;
+} 
+
+.content{
+    font-size: 20px;
+}
+
+.content img{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.content img:hover{
+    width: 90%;
+    height: 90%;
+    
+}
+
+.content h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.load-more{
+    margin-top: 40px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 1px solid red;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.load-more:hover
+{
+    background-color:#FF2F27;
+    color: white;
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items:first baseline;
+    padding: 100px 0px;
+    margin-top: 100px;
+    border-top: 5px solid #FF2F273d;
+
+}
+
+
+.footer ul{
+    display: flex;
+}
+
+.footer h3
+{
+    font-size: 30px;
+    
+}
+
+.footer h4
+{
+    font-size: 0.7em;
+    
+}
+
+.footer a{
+    color:white;
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+}
+
+
+.footer a:hover
+{
+    color: #FF2F27;
+}
+
+
+/*MEDIAS QUERYES DEL INDEX*/
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+@media(max-width:991px){
+
+    .header{
+        background-position-y: top;
+        background-size: 530px 100%;
+    }
+
+    .menu{
+        padding: 20px;
+        
+    }
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position:absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #030303;
+        display: none;
+    }
+
+    .menu .navbar ul{
+        display: block;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+        
+    }
+
+    .btn-1{
+        display: none;
+    }
+
+    #menu:checked ~ .navbar{
+       display: initial;
+       
+    }
+
+    .header-content{
+        flex-direction: column;
+        padding: 180px 30px 30px 30px;
+    }
+    .header-1 {
+        width: 100%;
+        align-items: center;
+    }
+    .header-2{
+        width: 100%;
+        text-align: center;
+    }
+    .movies{
+        padding: 30px;
+    }
+    .footer{
+        margin-top: 30px;
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer ul{
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
+/* COMIENZA CSS DE NOSOTROS*/
+
+
+
+/* COMIENZA EL CSS DE APPI-SERIES*/
+
+#series p{
+    font-size:15px;
+    color: #970000;
+}
+
+
+
+
+
+/* COMIENZA EL CSS DEL CONTACTO */
+
+#body-contacto {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #030303;
+    color:white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+#body-contacto h2{
+    animation-duration: 2s;
+    animation-name: slidein;
+    background-image: url("img/14.jpg");
+    padding: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    font-size: 4em;
+    margin: 0%;
+    
+    
+    
+}
+
+@media(max-width:570px){
+    #body-contacto h2{
+        
+        font-size: 40px;
+        /* align-items: center; */
+    } 
+    
+    #body-contacto .contacto{
+        width: auto;
+        
+    }
+    
+}
+
+
+.contacto
+{
+    height: 95%;
+    width: 40%;
+    font-size: 1.3em;
+    background-color:inherit; 
+    text-align: center;
+    padding: 15px 15px;
+    letter-spacing: 5px;
+    color: white;
+    
+      
+}
+
+.input
+{
+    margin-top: 15px;
+    padding: 5px;
+    width: 400px;
+    border-radius: 20px;
+    border: solid 2px black;
+    text-align: center;
+    height: 40px;
+    font-size: 1em;
+    color: #970000;
+    font-weight: 600;
+    box-shadow: 7px 7px 9px #970000;
+    
+}
+.input:focus{
+    background-color: darkslategray;
+    color: black;
+    
+} 
+
+#button
+{
+    
+    margin: 0;
+    background-color:#970000;
+    border: white solid 7px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 10px;
+    width: 150px;
+    margin-bottom: 20px;
+    
+       
+}
+
+
+#button:hover
+{
+    box-shadow: 13px 11px 300px white;
+    color:black;
+    border: black solid 7px;
+    font-size: 0.7em;
+}
+
+
+
+/*CSS DE SERIES-APPI*/
+
+.button{
+    text-align: center;
+}
+
+.button input{
+    padding: 10px;
+    margin-right: 60px;
+    width: 300px;
+    border-radius: 20px;
+    background-color:#970000 ;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+#body-nosotros
+{
+    padding:10% 5%;
+    height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #030303;
+    color:white;
+    font-size: 45px;
+}
+
+#iniciosesion a{
+   
+    text-align: center;
+    
+    
+}
+
+.vinicio h3{
+   margin-top: 50px;
+}
+
+
+#body-nosotros a,
+.vinicio
+{
+    color:#FF2F27;
+}
+
+
+#body-nosotros a h3,
+#body-contacto a h3
+{
+    color: #FF2F27;
+}
+
+#body-series a:hover{
+    color: white
+}
+#body-nosotros a:hover{
+    color: white;
+}
+#body-series a h3:hover{
+    color: white;
+}
+#body-nosotros a h3:hover{
+    color: white;
+}
+#body-contacto a h3:hover{
+    color: white
+}
+
+/* COMIENZA EL CSS DE NOSOTROS */
+
+@media(max-width:690px){
+    #body-nosotros,
+    #body-series
+
+    {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    } 
+  
+}
+
+
+#inicio-sesion a p{
+    text-align: center;
+}
+
+#inicio-sesion h1
+{
+    color: #970000;
+}
+
+
+.datos,
+.denvio
+{
+    /* width: 100%;
+    height: 40px; */
+    border: transparent;
+    width: 100%;
+    height: 35px;
+
+    padding: 7px;
+    background-color: #030303;
+    color: rgb(255, 255, 255);
+    /* border: 0.1px white solid; */
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.datos{
+    border: solid 0.5px rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+
+
+.denvio{
+    background-color:#970000;
+    height:35px;
+}
+
+.denvio:hover{
+    padding: 10px;
+    height: 95%;
+    cursor: pointer;
+    
+    
+}
+
+#iniciosesion 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+        
+}
+#inicio-sesion{
+    width: 30%  ;
+}
+
+
+
+
+.inicio-sesion a
+{
+    
+    color: white;
+}
+
+.inicio-sesion h3{
+    font-size: 20px;
+}
+
+.olvido a{
+    color: white;
+}
+
+.olvido,label
+{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    
+}
+
+[type="checkbox"]{
+    margin-right: 5px;
+}
+
+.inicio-sesion label{
+    font-size: 12px;
+    
+}
+
+span{
+    
+    color: red;
+    font-size: 12px;
+}
+
+#enviado{
+    margin-top: 10px;
+    color:white;
+    text-align: center;
+    
+    visibility:hidden;
+    /* width: 100%; */
+    
+}
+
+#enviado label{
+    
+    font-size:1.5em;
+}
+
+#avisaContrasena{
+    color: white;
+    /* visibility: hidden; */
+    
+}
+
+#contrasena:hover #avisaContrasena{
+    visibility: visible;
+}
+
+#box1
+{
+    display: inline-block;
+    
+
+}
+
+
